@@ -14,7 +14,7 @@ async def on_message(message):
 		if r.id == 783392898619408425:  # @someone
 			print('detected thing')
 			members = message.guild.members
-			victim = members[random.randrange(len(members) - 1)]
+			victim = members[random.randrange(len(members))]
 			await message.channel.send(victim.mention())
 			return
 
