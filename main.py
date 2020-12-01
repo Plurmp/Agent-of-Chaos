@@ -9,7 +9,9 @@ TOKEN = cred['DISCORD_TOKEN']
 
 @client.event
 async def on_message(message):
+	print('message')
 	for r in message.role_mentions:
+		print('detected thing')
 		if r.int == 783392898619408425:  # @someone
 			members = message.guild.members
 			victim = members[random.randrange(len(members) - 1)]
