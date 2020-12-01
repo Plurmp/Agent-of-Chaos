@@ -11,8 +11,8 @@ TOKEN = cred['DISCORD_TOKEN']
 async def on_message(message):
 	print('message')
 	for r in message.role_mentions:
-		print('detected thing')
 		if r.int == 783392898619408425:  # @someone
+			print('detected thing')
 			members = message.guild.members
 			victim = members[random.randrange(len(members) - 1)]
 			await message.channel.send(victim.mention())
