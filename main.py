@@ -3,7 +3,9 @@ from os import environ as cred
 
 import discord
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+client = discord.Client(intents=intents)
 TOKEN = cred['DISCORD_TOKEN']
 
 
