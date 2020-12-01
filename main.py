@@ -15,7 +15,7 @@ async def on_message(message):
 			print('detected thing')
 			members = message.guild.members
 			victim = members[random.randrange(len(members))]
-			await message.channel.send(victim.mention())
+			await message.channel.send(f"{victim.mention()}")
 			return
 
 client.run(TOKEN)
